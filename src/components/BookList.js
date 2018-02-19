@@ -9,7 +9,7 @@ import books from '../fixtures/books';
 
 class BookList extends React.Component {
 
-  componentDidMount = () => {
+  componentWillMount = () => {
     this.populateBooks(books);
   }
 

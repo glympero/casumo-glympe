@@ -4,9 +4,4 @@ const setBooks = (books) => ({
   books
 });
 
-const updateBooks = (books) => ({
-  type: 'UPDATE_BOOKS',
-  books
-});
-
-export { setBooks, updateBooks };
+export { setBooks };

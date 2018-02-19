@@ -38,26 +38,8 @@ const generateAuthorName = () => {
   return `${faker.name.lastName()} ${faker.name.firstName()}`;
 }
 
-let books = [];
-
-for(let i=0; i<100000; i++){
-  books.push(
-    {
-      id: faker.random.uuid(),
-      name: generateBookName(),
-      author: {
-        name: generateAuthorName(),
-        gender: gender[getRandomInt(0,1)]
-      },
-      genre: genres[faker.random.number(6)],
-      publish_date: faker.date.past()
-    }
-  )
-}
-
-export const generateBooks = (number) => {
+const generateBooks = (number) => {
   let books = [];
-
   for(let i = 0; i < number; i++){
     books.push(
       {
@@ -74,5 +56,7 @@ export const generateBooks = (number) => {
   }
   return books;
 }
+
+const books = generateBooks(100000);
 
 export default books;
